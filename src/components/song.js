@@ -31,14 +31,33 @@ function Song() {
         }
     }
 
+
+
     return (
         <ul className='list-group'>
             {
                 !!songs && songs.length > 0 && songs.map((song, i) => {
                     return (
-                        <li className='btn btn-dark m-0 rounded-0' key={i}>
+                        <li className='btn btn-dark m-0 rounded-0' onClick={
+
+
+                            () => {
+                                const track = new Sound(sound.url, null, (e) => {
+                                    if (e) {
+                                        console.log('error loading track:', e)
+                                    } else {
+                                        track.play()
+                                    }
+                                })
+                            }
+
+
+                        }
+                            key={i}>
                             {song.name}
+                            <audio id='audio' src={song.url}></audio>
                         </li>
+
                     )
                 })
             }
@@ -48,3 +67,4 @@ function Song() {
 
 
 export default Song;
+

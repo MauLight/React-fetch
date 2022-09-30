@@ -2,17 +2,17 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <Navbar>
+        <div className='bg-dark d-flex justify-content-center  w-100'>
             <button className='btn btn-dark'>
-                <i class="fa-solid fa-backward"></i>
+                <i className="fa-solid fa-backward"></i>
             </button>
             <button className='btn btn-dark'>
-                <i class="fa-solid fa-play"></i>
+                <i className="fa-solid fa-play"></i>
             </button>
             <button className='btn btn-dark'>
-                <i class="fa-solid fa-forward"></i>
+                <i className="fa-solid fa-forward"></i>
             </button>
-        </Navbar>
+        </div>
     )
 }
 

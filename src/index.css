@@ -16,3 +16,8 @@ code {
 li {
   color: whitesmoke !important;
 }
+
+.nav {
+  position: fixed;
+  bottom: 0%;
+}
